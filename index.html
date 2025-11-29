@@ -1,12 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Simple Buttons!</titled>
-</head>
-<body>
-  <button id="clickMe">Click me!</buttons>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Gadget Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">GadgetStore</div>
 
-  <script src="main.js"></script>
-</body>
+      <nav class="nav">
+        <ul>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="cart">
+        <span>Cart:</span>
+        <!-- ❌ JS ищет #cart-count, а здесь #cartCounter -->
+        <span id="cartCounter">0</span>
+        <span>items</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <h2>Filters</h2>
+        <!-- Фильтры пока просто декоративные -->
+        <label class="filter-option">
+          <input type="checkbox" name="category" value="phone" checked />
+          Phones
+        </label>
+        <label class="filter-option">
+          <input type="checkbox" name="category" value="laptop" />
+          Laptops
+        </label>
+        <label class="filter-option">
+          <input type="checkbox" name="category" value="accessory" />
+          Accessories
+        </label>
+
+        <div class="sidebar-note">
+          * Filters are not active yet. We are working on it.
+        </div>
+      </aside>
+
+      <section class="content">
+        <section id="products" class="products">
+          <h1 class="page-title">Latest Gadgets</h1>
+
+          <div id="product-list" class="product-list">
+            <!-- Продукты будут рендериться из JS -->
+          </div>
+        </section>
+
+        <section class="cart-summary">
+          <h2>Cart Summary</h2>
+          <p>
+            Items in cart:
+            <span id="cart-items-count">0</span>
+          </p>
+          <p>
+            Total:
+            <strong id="cart-total">$0.00</strong>
+          </p>
+          <!-- ❌ Семантически лучше button, но тут <div> с role не указан -->
+          <div class="checkout-button">
+            Proceed to checkout
+          </div>
+        </section>
+
+        <section id="about" class="about">
+          <h2>About GadgetStore</h2>
+          <p>
+            GadgetStore is a small demo shop built to test an AI code reviewer.
+            We focus on modern JavaScript practices and accessible, clean UI
+            layouts, while intentionally leaving a few issues for reviewers
+            to find.
+          </p>
+        </section>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <p>© 2025 GadgetStore. All rights reserved.</p>
+      <p>
+        Customer support:
+        <a href="mailto:support@gadgetstore.dev">support@gadgetstore.dev</a>
+      </p>
+    </footer>
+
+    <!-- ❌ script подключен внизу, но без type="module" — окей, но логика рассчитана на современный JS -->
+    <script src="script.js"></script>
+  </body>
 </html>
