@@ -1,0 +1,196 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #111827;
+  color: #fff;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* ❌ Для мобильных шрифты немного мелковаты, но жить можно */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.nav a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.cart {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+  background-color: #1f2937;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  padding: 1.5rem 2rem;
+  gap: 1.5rem;
+}
+
+.sidebar {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+}
+
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.sidebar-note {
+  margin-top: 0.75rem;
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.page-title {
+  margin: 0 0 1rem 0;
+  font-size: 1.6rem;
+}
+
+.products {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 1.2rem 1.4rem;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1rem;
+}
+
+.product-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  padding: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f9fafb;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.product-category {
+  font-size: 0.8rem;
+  color: #6b7280;
+}
+
+.product-description {
+  font-size: 0.85rem;
+  margin: 0.4rem 0 0.8rem 0;
+  color: #4b5563;
+}
+
+.product-price {
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+}
+
+.product-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  border-radius: 999px;
+  padding: 0.35rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease, transform 0.05s ease;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-sm {
+  font-size: 0.78rem;
+  padding: 0.25rem 0.7rem;
+}
+
+.badge {
+  background-color: #e5e7eb;
+  color: #374151;
+  border-radius: 999px;
+  padding: 0.15rem 0.5rem;
+  font-size: 0.75rem;
+}
+
+/* Cart summary */
+.cart-summary {
+  background-color: #fff;
+  border-radius: 0.75rem;
+  padding: 1rem 1.4rem;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, 0.08);
+  font-size: 0.95rem;
+}
+
+.checkout-button {
+  margin-top: 0.75rem;
+  background-color: #16a34a;
+  color: white;
+  padding: 0.6rem 0.9rem;
+  text-align: center;
+  border-radius: 999px;
